@@ -1,0 +1,131 @@
+version: "3.1"
+
+stories:
+
+- story: greet and ask inspiration
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_inspiration
+    - action: action_recommend_quote
+    - action: utter_ask_more
+
+- story: greet and ask motivation
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_motivation
+    - action: action_recommend_quote
+    - action: utter_ask_more
+
+- story: greet and ask success
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_success
+    - action: action_recommend_quote
+    - action: utter_ask_more
+
+- story: greet and ask love
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_love
+    - action: action_recommend_quote
+    - action: utter_ask_more
+
+- story: greet and ask humor
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_humor
+    - action: action_recommend_quote
+    - action: utter_ask_more
+
+- story: greet and ask random
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_random
+    - action: action_recommend_quote
+    - action: utter_ask_more
+
+- story: user satisfied and wants another
+  steps:
+    - intent: express_satisfaction
+    - action: utter_positive_feedback
+    - intent: ask_another
+    - action: action_another_quote
+    - action: utter_ask_more
+
+- story: user wants another quote directly
+  steps:
+    - intent: ask_another
+    - action: action_another_quote
+    - action: utter_ask_more
+
+- story: user not satisfied
+  steps:
+    - intent: express_dissatisfaction
+    - action: utter_negative_feedback
+
+- story: user not satisfied then picks category
+  steps:
+    - intent: express_dissatisfaction
+    - action: utter_negative_feedback
+    - intent: ask_motivation
+    - action: action_recommend_quote
+    - action: utter_ask_more
+
+- story: ask help
+  steps:
+    - intent: ask_help
+    - action: utter_help
+
+- story: help then quote
+  steps:
+    - intent: ask_help
+    - action: utter_help
+    - intent: ask_inspiration
+    - action: action_recommend_quote
+    - action: utter_ask_more
+
+- story: goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: satisfied then goodbye
+  steps:
+    - intent: express_satisfaction
+    - action: utter_positive_feedback
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: full happy path inspiration
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_inspiration
+    - action: action_recommend_quote
+    - action: utter_ask_more
+    - intent: express_satisfaction
+    - action: utter_positive_feedback
+    - intent: ask_another
+    - action: action_another_quote
+    - action: utter_ask_more
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: full happy path humor
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_humor
+    - action: action_recommend_quote
+    - action: utter_ask_more
+    - intent: affirm
+    - action: action_another_quote
+    - action: utter_ask_more
+    - intent: deny
+    - action: utter_goodbye

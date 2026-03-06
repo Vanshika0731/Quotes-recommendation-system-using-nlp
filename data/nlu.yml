@@ -1,0 +1,250 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - hey there
+    - good morning
+    - good evening
+    - good afternoon
+    - howdy
+    - what's up
+    - sup
+    - greetings
+    - hi there
+    - hello there
+    - yo
+    - hiya
+    - hi bot
+    - hello bot
+    - start
+    - begin
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - see ya
+    - later
+    - take care
+    - farewell
+    - cya
+    - good night
+    - have a good day
+    - thanks and bye
+    - bye bye
+    - I'm done
+    - that's all
+    - exit
+    - quit
+    - I'm leaving
+
+- intent: ask_inspiration
+  examples: |
+    - inspire me
+    - I need inspiration
+    - give me an inspiring quote
+    - share something inspiring
+    - I want an inspirational quote
+    - lift my spirits
+    - uplift me
+    - something to uplift my mood
+    - I need to feel uplifted
+    - share some wisdom
+    - something positive
+    - positive quote please
+    - brighten my day
+    - I'm feeling low, inspire me
+    - a quote about hope
+    - hopeful quote
+    - something meaningful
+    - words of wisdom
+    - I need encouragement
+    - encourage me
+
+- intent: ask_motivation
+  examples: |
+    - motivate me
+    - I need motivation
+    - give me a motivational quote
+    - I need to keep going
+    - help me push through
+    - I need to stay driven
+    - something to push me forward
+    - I need willpower
+    - give me energy
+    - I'm feeling lazy, motivate me
+    - I want to work hard
+    - I need to grind
+    - push me
+    - I need to stay focused
+    - help me stay on track
+    - I'm struggling, motivate me
+    - fire me up
+    - pump me up
+    - I need drive
+    - motivational quote please
+    - something to get me going
+    - help me not give up
+
+- intent: ask_success
+  examples: |
+    - give me a success quote
+    - quote about success
+    - I want to succeed
+    - how to achieve goals
+    - quote about achieving dreams
+    - something about winning
+    - I want to reach my goals
+    - a quote about hard work
+    - quote for achievers
+    - something about greatness
+    - I want to be great
+    - excellence quote
+    - share a quote about accomplishment
+    - a quote about hustle
+    - hustle quote
+    - dream big quote
+    - something about ambition
+    - ambition quote
+    - quote about determination
+    - I need to believe in myself
+
+- intent: ask_love
+  examples: |
+    - give me a love quote
+    - quote about love
+    - I want a romantic quote
+    - something about love
+    - share a quote about the heart
+    - love and relationship quote
+    - something romantic
+    - I miss someone, give me a love quote
+    - something about kindness
+    - quote about compassion
+    - caring quote
+    - something sweet
+    - I want to feel loved
+    - love inspiration
+    - something heartwarming
+    - warm quote
+    - a quote for my partner
+    - relationship quote
+    - affection quote
+
+- intent: ask_humor
+  examples: |
+    - give me a funny quote
+    - I want to laugh
+    - something funny
+    - make me smile
+    - cheer me up
+    - humor quote
+    - tell me a witty quote
+    - a quote with humor
+    - something hilarious
+    - I need a laugh
+    - lighten my mood
+    - funny wisdom
+    - witty quote
+    - something clever and funny
+    - comedy quote
+    - joke quote
+    - something to make me smile
+    - I need to cheer up
+    - fun quote please
+
+- intent: ask_random
+  examples: |
+    - surprise me
+    - give me any quote
+    - random quote
+    - pick one for me
+    - anything will do
+    - I don't know, just give me one
+    - whatever you think is best
+    - random
+    - pick a random quote
+    - just surprise me
+    - your choice
+    - you decide
+    - I'm feeling adventurous
+    - show me something interesting
+
+- intent: ask_another
+  examples: |
+    - give me another
+    - another one
+    - one more please
+    - next quote
+    - more please
+    - keep going
+    - show me another
+    - different quote
+    - I want more
+    - one more
+    - again
+    - try another
+    - another please
+    - next one
+    - show me more
+    - more quotes
+
+- intent: express_satisfaction
+  examples: |
+    - that was great
+    - I love it
+    - perfect
+    - amazing
+    - wonderful
+    - that's exactly what I needed
+    - beautiful quote
+    - loved it
+    - that resonated with me
+    - so good
+    - thank you
+    - thanks
+    - thx
+    - that helped
+    - exactly what I was looking for
+    - great quote
+    - awesome
+    - brilliant
+    - fantastic
+
+- intent: express_dissatisfaction
+  examples: |
+    - not really
+    - not what I wanted
+    - meh
+    - not good
+    - I don't like it
+    - boring
+    - try again
+    - something else
+    - not helpful
+    - not for me
+    - doesn't resonate
+    - disappointing
+    - give me something better
+    - that's not it
+
+- intent: ask_help
+  examples: |
+    - help
+    - help me
+    - what can you do
+    - how does this work
+    - what are your features
+    - what categories do you have
+    - show me options
+    - I need help
+    - guide me
+    - how to use this
+    - instructions
+    - what can I ask you

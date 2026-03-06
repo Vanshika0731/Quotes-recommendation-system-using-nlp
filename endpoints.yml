@@ -1,0 +1,22 @@
+# Rasa Server Endpoints
+# Quotes Recommendation Chatbot
+
+# Custom action server endpoint
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+# Uncomment to use a tracker store (default: in-memory)
+# tracker_store:
+#   type: mongod
+#   url: mongodb://localhost:27017
+#   db: rasa
+#   username: your-username
+#   password: your-password
+
+# Uncomment to use an event broker
+# event_broker:
+#   url: localhost
+#   username: username
+#   password: password
+#   port: 5672
+#   queue: rasa_core_events

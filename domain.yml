@@ -1,0 +1,100 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_inspiration
+  - ask_motivation
+  - ask_success
+  - ask_love
+  - ask_humor
+  - ask_random
+  - ask_another
+  - express_satisfaction
+  - express_dissatisfaction
+  - ask_help
+  - affirm
+  - deny
+
+entities:
+  - category
+
+slots:
+  last_category:
+    type: text
+    mappings:
+      - type: custom
+  quote_count:
+    type: float
+    initial_value: 0
+    mappings:
+      - type: custom
+
+responses:
+  utter_greet:
+    - text: |
+        👋 Hello! I'm **QuoteBot**, your personal quote companion powered by Rasa NLU!
+        
+        I can share quotes from these categories:
+        ✨ **Inspiration** — uplift your spirit
+        ⚡ **Motivation** — fuel your drive
+        🏆 **Success** — celebrate achievement
+        💛 **Love** — warm your heart
+        😄 **Humor** — lighten your day
+        
+        What kind of quote are you looking for today?
+
+  utter_goodbye:
+    - text: "Goodbye! 🌟 May the words you carry today light your path forward. Take care!"
+    - text: "See you soon! 👋 Keep shining and stay inspired!"
+
+  utter_help:
+    - text: |
+        Here's how I can help you:
+        
+        💬 Just tell me what you need! For example:
+        • "Give me an inspiring quote"
+        • "I need some motivation"
+        • "Share a funny quote"
+        • "Quote about love"
+        • "Surprise me!" (random quote)
+        • "Give me another" (get a new quote in same category)
+
+  utter_ask_more:
+    - text: "Did that resonate with you? 😊 Would you like another quote?"
+    - text: "Hope that was meaningful! Want another one? 🌟"
+    - text: "How did that feel? I can share another if you'd like!"
+
+  utter_positive_feedback:
+    - text: "Wonderful! 🎉 So glad that resonated with you! Would you like another, or try a different category?"
+    - text: "That's great to hear! ✨ Want to explore more quotes?"
+
+  utter_negative_feedback:
+    - text: "No worries! Let me try something different. Which category would you prefer — Inspiration, Motivation, Success, Love, or Humor?"
+    - text: "Understood! 😊 Let's find something better. What mood are you in?"
+
+  utter_fallback:
+    - text: |
+        I'm not quite sure what you mean, but I'm here to share great quotes! 😊
+        
+        Try saying something like:
+        • "Inspire me"
+        • "I need motivation"
+        • "Something funny"
+        • "A love quote"
+        • "Surprise me!"
+
+actions:
+  - action_recommend_quote
+  - action_another_quote
+  - utter_greet
+  - utter_goodbye
+  - utter_help
+  - utter_ask_more
+  - utter_positive_feedback
+  - utter_negative_feedback
+  - utter_fallback
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
